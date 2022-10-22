@@ -1,10 +1,24 @@
 package Seminar1;
 
 import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
 
-// Реализовать простой калькулятор
+
+// Реализовать простой калькулятор + добавить логирование
 
 public class Task03 {
+    public static void fileWriter (String inputString) {
+        try {
+        String pathProject = System.getProperty("user.dir");
+        String pathFile = pathProject.concat("/file_Seminar1_Task03.txt");
+        FileWriter x = new FileWriter(pathFile, true);
+        x.append(inputString+"\n");
+        x.close();
+        } catch (IOException ex) {
+        System.out.println(ex.getMessage());
+        }}
+        
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.printf("Введите первое число: ");
@@ -14,23 +28,26 @@ public class Task03 {
         System.out.printf("Введите второе число: ");
         Double number2 = input.nextDouble();
         input.close();
-
+        
+        String result = new String();
         switch (sign) {
             case "+":
-                System.out.printf("%f %s %f = %f\n", number1, sign, number2, number1 + number2);
+                result = String.format("%f %s %f = %f", number1, sign, number2, number1 + number2);
                 break;
             case "-":
-                System.out.printf("%f %s %f = %f\n", number1, sign, number2, number1 - number2);
+                result = String.format("%f %s %f = %f", number1, sign, number2, number1 - number2);
                 break;
             case "*":
-                System.out.printf("%f %s %f = %f\n", number1, sign, number2, number1 * number2);
+                result = String.format("%f %s %f = %f", number1, sign, number2, number1 * number2);
                 break;
             case "/":
                 if (number2 != 0)
-                    System.out.printf("%f %s %f = %f\n", number1, sign, number2, number1 / number2);
+                    result = String.format("%f %s %f = %f", number1, sign, number2, number1 / number2);
                 else
-                    System.out.printf("Деление на ноль невозможно!\n");
+                    result = String.format("%f %s %f = Деление на ноль невозможно!", number1, sign, number2);
                 break;
         }
+        System.out.println(result);
+        fileWriter(result);
     }
 }
