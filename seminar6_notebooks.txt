@@ -1,0 +1,11 @@
+INTEL   =   8 Gb    =   16 Tb   =   AMD      =   Gigabyte   =   white   =   23
+AMD     =   16 Gb   =   4 Tb    =   NVIDIA   =   Gigabyte   =   grey    =   21
+INTEL   =   16 Gb   =   1 Tb    =   NVIDIA   =   MSI        =   red     =   15
+AMD     =   4 Gb    =   2 Tb    =   AMD      =   Gigabyte   =   white   =   19
+AMD     =   4 Gb    =   2 Tb    =   NVIDIA   =   MSI        =   black   =   21
+INTEL   =   8 Gb    =   16 Tb   =   NVIDIA   =   Gigabyte   =   white   =   23
+AMD     =   16 Gb   =   4 Tb    =   NVIDIA   =   Gigabyte   =   grey    =   21
+INTEL   =   16 Gb   =   1 Tb    =   NVIDIA   =   MSI        =   red     =   15
+AMD     =   32 Gb   =   2 Tb    =   AMD      =   MSI        =   black   =   17
+AMD     =   4 Gb    =   2 Tb    =   NVIDIA   =   Gigabyte   =   white   =   19
+AMD     =   4 Gb    =   2 Tb    =   NVIDIA   =   MSI        =   black   =   21
