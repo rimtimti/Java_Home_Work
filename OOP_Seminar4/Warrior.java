@@ -1,6 +1,6 @@
 package OOP_Seminar4;
 
-public abstract class Warrior<T,S>  {
+public abstract class Warrior<T extends Weapon, S extends Shield>  {
     private String name;
     private T weapon;
     private S shield;
