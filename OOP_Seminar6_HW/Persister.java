@@ -1,13 +1,14 @@
 package OOP_Seminar6_HW;
 
-public class Persister {
-    private User user;
+public abstract class Persister {
+    public User user;
 
     public Persister(User user) {
         this.user = user;
     }
 
-    public void save() {
-        System.out.println("Save user: " + user.getName());
+    @Override
+    public String toString(){
+        return user.getName();
     }
 }

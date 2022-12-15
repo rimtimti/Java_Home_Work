@@ -1,10 +1,9 @@
 package OOP_Seminar6_HW;
 
-public class ConsolePersister {
-    private User user;
-
+public class ConsolePersister extends Persister{
+    
     public ConsolePersister(User user) {
-        this.user = user;
+        super(user);
     }
 
     public void report() {
