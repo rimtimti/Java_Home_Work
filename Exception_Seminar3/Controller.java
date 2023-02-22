@@ -34,8 +34,10 @@ public class Controller {
     }
 
     public void checkName(String data) {
-        // for (char c : data.toCharArray())
             if (!data.matches("^[a-zA-Z-]*$")) {
+                throw new ExceptionIncorrectName();
+            }
+            if (data.charAt(0) == '-' || data.charAt(data.length()-1) == '-'){
                 throw new ExceptionIncorrectName();
             }
     }

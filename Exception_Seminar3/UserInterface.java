@@ -12,7 +12,7 @@ public class UserInterface {
     public void run() {
         System.out.println("\nПеред Вами программа 'Визитка': получает данные от пользователя, проверяет и записывает их в файл с названием по его фамилии. Работает только в латинице!");
         while (true) {
-            System.out.println("Введите данные через ПРОБЕЛ (возможно любое число пробелов) в следующем формате:\nФамилия Имя Отчество(строки) Дата рождения(в формате dd.mm.yyyy) Номер телефона(только цифры) Пол(m - муж или f - жен.)");
+            System.out.println("Введите данные через ПРОБЕЛ (возможно любое число пробелов между данными) в следующем формате:\nФамилия Имя Отчество(строки, допускается дефис, но не сначала и на конце)\nДата рождения(в формате dd.mm.yyyy)\nНомер телефона(только цифры)\nПол(m - муж или f - жен.)");
             try {
                 User user = controller.checkData(controller.inputFromUser());
                 controller.checkName(user.getSurname());
@@ -26,7 +26,6 @@ public class UserInterface {
 
             } catch (ExeptionMoreInput e) {
                 System.out.println("Введено больше данных чем нужно!");
-                // e.printStackTrace();
                 continue;
             } catch (ExeptionLessInput e) {
                 System.out.println("Введено меньше данных чем нужно!");
