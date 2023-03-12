@@ -24,10 +24,10 @@ public class UserInterface {
                 controller.fileWriter(user);
                 break;
 
-            } catch (ExeptionMoreInput e) {
+            } catch (ExceptionMoreInput e) {
                 System.out.println("Введено больше данных чем нужно!");
                 continue;
-            } catch (ExeptionLessInput e) {
+            } catch (ExceptionLessInput e) {
                 System.out.println("Введено меньше данных чем нужно!");
                 continue;
             } catch (ExceptionIncorrectName e) {

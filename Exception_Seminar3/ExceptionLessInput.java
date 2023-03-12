@@ -1,8 +1,8 @@
 package Exception_Seminar3;
 
-public class ExeptionLessInput extends RuntimeException {
+public class ExceptionLessInput extends RuntimeException {
 
-    public ExeptionLessInput() {
+    public ExceptionLessInput() {
         super("Введено меньше данных чем нужно!");
     }
 }

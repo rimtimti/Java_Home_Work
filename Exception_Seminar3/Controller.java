@@ -25,10 +25,10 @@ public class Controller {
         int lenght = 6;
         String[] result = input.trim().replaceAll(" +", " ").split(" ");
         if (result.length > lenght) {
-            throw new ExeptionMoreInput();
+            throw new ExceptionMoreInput();
         }
         if (result.length < lenght) {
-            throw new ExeptionLessInput();
+            throw new ExceptionLessInput();
         }
         return map(result);
     }
